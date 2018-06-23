@@ -23,6 +23,8 @@ class Home extends Component {
       </View>
    )
  }
+
+ keyExtractor= (item, index) => item.name
   render() {
     
     return (
@@ -44,6 +46,7 @@ class Home extends Component {
             <View style={styles.avatarScroller}>
               <FlatList
                 data={UserData}
+                keyExtractor={this.keyExtractor}
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 renderItem={this.renderItem}

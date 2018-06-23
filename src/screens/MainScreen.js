@@ -6,7 +6,7 @@ import Home from './Home';
 import Search from './Search';
 import AddMedia from './AddMedia';
 import Likes from './Likes';
-import Profile from './Profile'
+import Profile from './Profiles'
 
 const TabNavigator = createBottomTabNavigator({
     Home: { screen: Home },
@@ -15,6 +15,7 @@ const TabNavigator = createBottomTabNavigator({
     Likes: { screen: Likes},
     Profile: { screen: Profile}
 },{
+    initialRouteName: 'Profile',
     swipeEnabled: true,
     animationEnabled: true,
     tabBarOptions: {
