@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import React, { Component } from 'react'
+import { Text, View } from 'react-native'
 import { Icon } from 'native-base';
 
-class AddMedia extends Component {
-  static navigationOptions = {
-    tabBarIcon: ({ tintColor }) => <Icon name='ios-add-circle-outline' style={{color: tintColor}} />
-  }
+export default class AddMedia extends Component {
+    static navigationOptions = {
+        tabBarIcon: ({tintColor}) => (
+            <Icon name='ios-add-circle' style={{color: tintColor}} />
+        )
+    }
   render() {
     return (
       <View>
-        <Text> Add Media </Text>
+        <Text> AddMedia </Text>
       </View>
     )
   }
 }
-
-export default AddMedia

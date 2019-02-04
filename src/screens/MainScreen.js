@@ -1,35 +1,43 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import { Icon } from 'native-base';
-import { createBottomTabNavigator } from 'react-navigation';
+import React, { Component } from 'react'
+import { Platform } from 'react-native'
+import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import AddMedia from './Addmedia';
+import Profile from './Profile';
+import Likes from './Likes';
 import Home from './Home';
 import Search from './Search';
-import AddMedia from './AddMedia';
-import Likes from './Likes';
-import Profile from './Profiles'
 
-const TabNavigator = createBottomTabNavigator({
-    Home: { screen: Home },
-    Search: { screen: Search },
-    AddMedia: { screen: AddMedia },
-    Likes: { screen: Likes},
-    Profile: { screen: Profile}
-},{
-    initialRouteName: 'Profile',
-    swipeEnabled: true,
+const TabNavigator = createAppContainer(createBottomTabNavigator({
+    Home: Home,
+    Search: Search,
+    AddMedia: AddMedia,
+    Likes: Likes,
+    Profile: Profile,
+}, {
     animationEnabled: true,
+    swipeEnabled: true,
     tabBarOptions: {
-        activeTintColor: 'black',
-        inActiveTintColor: 'grey',
+        style: {
+            ...Platform.select({
+                android: {
+                    backgroundColor: 'white'
+                }
+            })
+        },
+    },
+    tabBarOptions: {
         showLabel: false,
-        showIcon: true,
-    }  
-})
+        activeTintColor: 'black',
+        inactiveTintColor: 'grey',
+        tabBarIcon: true,
+    }
+}))
 
 class MainScreen extends Component {
     static navigationOptions = {
-      header: null,
+     header: null,
     }
+
   render() {
     return (
       <TabNavigator />
@@ -37,4 +45,6 @@ class MainScreen extends Component {
   }
 }
 
-export default MainScreen;
+
+
+export default MainScreen

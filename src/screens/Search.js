@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
 import { Icon } from 'native-base';
 
-class Search extends Component {
-  static navigationOptions = {
-    tabBarIcon: ({ tintColor }) => <Icon name='ios-search-outline' style={{color: tintColor}} />
-  }
+export default class Search extends Component {
+    static navigationOptions = {
+        tabBarIcon: ({tintColor}) => (
+            <Icon name='ios-search' style={{color: tintColor}} />
+        )
+    }
   render() {
     return (
       <View>
@@ -14,5 +16,3 @@ class Search extends Component {
     )
   }
 }
-
-export default Search

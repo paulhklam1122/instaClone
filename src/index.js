@@ -1,17 +1,10 @@
-
-import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
-import MainScreen from './screens/MainScreen.js';
+import { createStackNavigator, createAppContainer } from 'react-navigation'
+import MainScreen from './screens/MainScreen.js'
 
 const AppNavigator = createStackNavigator({
-  Main: {screen: MainScreen },
+    Main: MainScreen
 })
-class App extends Component {
-  render() {
-    return (
-      <AppNavigator />
-    )
-  }
-}
+
+const App = createAppContainer(AppNavigator)
+
 export default App
