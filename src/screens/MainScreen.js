@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Platform } from 'react-native'
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs'
 import AddMedia from './Addmedia';
 import Profile from './Profile';
 import Likes from './Likes';

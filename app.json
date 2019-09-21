@@ -1,11 +1,14 @@
 {
   "expo": {
-    "name": "instagram-clone",
-    "description": "This project is really great.",
+    "name": "Instagram Clone",
     "slug": "instagram-clone",
     "privacy": "public",
-    "sdkVersion": "32.0.0",
-    "platforms": ["ios", "android"],
+    "sdkVersion": "35.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
